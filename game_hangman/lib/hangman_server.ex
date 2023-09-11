@@ -1,6 +1,7 @@
 defmodule GameHangman.HangmanServer do
   import GameHangman.HangmanUtils
   use GenServer
+
   @game_version :"Hangman V4.5"
 
   @doc """
@@ -27,7 +28,7 @@ defmodule GameHangman.HangmanServer do
     IO.puts(drawing)
     IO.puts("#{@game_version}, Puntos: #{ptos}")
 
-    ing_l = IO.gets("Ingrese una letra o solicita una pista ([P]): ") |> String.trim
+    ing_l = IO.gets("#{@game_version}, Ingrese una letra o solicita una pista ([P]): ") |> String.trim
 
     ptos_x_ing = case ing_l do
       "[P]" -> 0
