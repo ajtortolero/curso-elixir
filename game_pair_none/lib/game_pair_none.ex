@@ -13,11 +13,12 @@ defmodule GamePairNone do
     IO.puts("Por favor, elige tu jugada (pares/nones): ")
 
     jugada_jugador = String.downcase(IO.gets(""))
+    jugada_jugador = String.replace(jugada_jugador, ~r/\n/, "")
 
     case jugada_jugador do
-      "pares\n" ->
+      "pares" ->
         IO.puts("Has elegido 'pares'.")
-      "nones\n" ->
+      "nones" ->
         IO.puts("Has elegido 'nones'.")
       _ ->
         IO.puts("Jugada inválida. Debes elegir 'pares' o 'nones'.")
@@ -25,7 +26,7 @@ defmodule GamePairNone do
     end
 
     # Generar un número aleatorio entre 1 y 10 para la suma de objetos.
-    suma_objetos = :rand.uniform(10) + 1
+    suma_objetos = :rand.uniform(10)
     IO.puts("La suma de objetos es #{suma_objetos}.")
 
     # Determinar si la suma es par o impar.
