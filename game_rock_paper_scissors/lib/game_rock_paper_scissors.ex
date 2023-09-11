@@ -1,6 +1,14 @@
 defmodule GameRockPaperScissors do
   @tipos [:piedra, :papel, :tijera]
 
+  @doc """
+   Para ejecutar el juego
+  1.- Ubicarnos en la carpeta lib \
+  2.- Ejecutar el siguiente comando "elixirc game_rock_paper_scissors.ex"  \
+  3.- Ejecutar iex \
+  4.- En earlang ejecutar GameRockPaperScissors.jugar()
+  """
+
   def jugar do
     IO.puts("¡Bienvenido al juego de Piedra, Papel o Tijera!")
     IO.puts("Elige una opción:")

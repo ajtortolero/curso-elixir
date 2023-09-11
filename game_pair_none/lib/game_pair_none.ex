@@ -1,13 +1,23 @@
 defmodule GamePairNone do
+
+  @doc """
+   Para ejecutar el juego
+  1.- Ubicarnos en la carpeta lib \
+  2.- Ejecutar el siguiente comando "elixirc game_pair_none.ex"  \
+  3.- Ejecutar iex \
+  4.- En earlang ejecutar GamePairNone.jugar()
+  """
+
   def jugar do
     IO.puts("¡Bienvenido al juego de Pares o Nones!")
     IO.puts("Por favor, elige tu jugada (pares/nones): ")
+
     jugada_jugador = String.downcase(IO.gets(""))
 
     case jugada_jugador do
-      "pares" ->
+      "pares\n" ->
         IO.puts("Has elegido 'pares'.")
-      "nones" ->
+      "nones\n" ->
         IO.puts("Has elegido 'nones'.")
       _ ->
         IO.puts("Jugada inválida. Debes elegir 'pares' o 'nones'.")
