@@ -39,8 +39,7 @@ defmodule GameRockPaperScissors do
   end
 
   defp elegir_opcion do
-    :rand.seed(:os.timestamp())
-    :rand.uniform(3) + 1
+    :rand.uniform(3)
   end
 
   defp determinar_resultado(jugador, computadora) do
