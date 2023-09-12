@@ -18,6 +18,10 @@ defmodule GameHangman.HangmanServer do
     game(w_game, selW, 0, 0, victim(), pid)
   end
 
+  def init_game(clue) when is_integer(clue) and clue <= 0 do
+    IO.puts("#{@game_version}, La cantidad de pistas no puede ser menor o igual a 0.")
+  end
+
   def init_game(clue) when is_integer(clue) and clue > 3 do
     IO.puts("#{@game_version}, La cantidad de pistas no puede ser mayor que 3.")
   end
