@@ -23,7 +23,7 @@ defmodule GameMemory.MemoryTask do
     sel_letters = selected_letters(alphabet_map())
     board_build = board()
     solved = load_board(sel_letters)
-    game(board_build,solved, username, 3, 0, 0)
+    game(board_build, solved, username, 3, 0, 0)
   end
 
   defp game(board_on, solved_board, player, lifes, acc_v, acc_c) when lifes > 0 and acc_v < 3 and acc_c < 3  do
@@ -70,6 +70,5 @@ defmodule GameMemory.MemoryTask do
     p1 = to_string(elem(pair1, 0))
     p2 = to_string(elem(pair2, 0))
     String.replace(board_on, "-"<>p1<>"-", elem(pair1, 1)) |> String.replace("-"<>p2<>"-", elem(pair2,1))
-
   end
 end
