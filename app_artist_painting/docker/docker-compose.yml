@@ -1,0 +1,35 @@
+version: "3"
+services:
+    elixir-db:
+        container_name: app-postgre-elixir-db
+        image: postgres
+        restart: unless-stopped
+        ports:
+          - "5432:5432"        
+        environment:
+            - POSTGRES_USER=elixir
+            - POSTGRES_PASSWORD=elixir
+            - POSTGRES_DB=elixir-course
+        volumes:
+            - app-elixir-data:/var/lib/postgresql/data
+        networks:
+          - app-elixir-network
+    elixir-db-adminer:
+        container_name: app-postgre-elixir-db-adminer
+        image: adminer
+        extra_hosts: [ 'host.docker.internal:host-gateway' ]
+        restart: always
+        environment:
+            ADMINER_DEFAULT_SERVER: postgres
+        depends_on:
+            - elixir-db
+        ports:
+            - 8888:8080
+        networks:
+          - app-elixir-network
+          
+networks:
+    app-elixir-network:
+  
+volumes:
+    app-elixir-data:
