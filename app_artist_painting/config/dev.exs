@@ -23,7 +23,7 @@ config :app_artist_painting, AppArtistPaintingWeb.Endpoint,
   check_origin: false,
   code_reloader: true,
   debug_errors: true,
-  secret_key_base: "J9xRGK3BxtcJjLyhV6rzL3q0Bj2V9zWBD8uWAm0KxJGGpFE9QfPwUt+dFo8B6qw5",
+  secret_key_base: "MLHuRhaswXeLg8TpF2ZVOS88wk+cKXbrCmandgJnKqb9IVNE1o8rlyDhTcTN3yvL",
   watchers: []
 
 # ## SSL Support

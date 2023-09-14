@@ -7,7 +7,7 @@ defmodule AppArtistPaintingWeb.Endpoint do
   @session_options [
     store: :cookie,
     key: "_app_artist_painting_key",
-    signing_salt: "Icz6csgl",
+    signing_salt: "wi1H3+ux",
     same_site: "Lax"
   ]
 

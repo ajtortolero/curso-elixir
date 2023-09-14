@@ -17,7 +17,7 @@ config :app_artist_painting, AppArtistPainting.Repo,
 # you can enable the server option below.
 config :app_artist_painting, AppArtistPaintingWeb.Endpoint,
   http: [ip: {127, 0, 0, 1}, port: 4002],
-  secret_key_base: "SoeK6xp2K2Eur97zyjReMbJdRQjoHJlw9STQzTTccBvML7NI8gwKlQ+sbPdbGgcV",
+  secret_key_base: "kwxtu0WhXe7Tj8Yp2lcem9VsLo2S5aMWyzSTMCi3vzeepl2J0JGU1VL/Kf9Zqwp9",
   server: false
 
 # Print only warnings and errors during test
